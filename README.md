@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🌿 EcoSearch
 
 **AI-assisted product search, sustainability analysis, comparison, and recommendations.**
@@ -628,4 +628,4 @@ Educational/portfolio project.
 =======
 # EcoSearch
 AI-Assisted Sustainable Product Search Platform
->>>>>>> 1ee74be6b20398dbee9e7f38c16351d53a4ca9af
+
