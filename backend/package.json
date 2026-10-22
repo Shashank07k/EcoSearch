@@ -1,0 +1,30 @@
+{
+  "name": "ecosearch-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "EcoSearch backend API — Node.js, Express, MongoDB via Mongoose",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/scripts/seedProducts.js",
+    "test": "node --import ./test/setup.js --test --test-concurrency=1 test/*.test.js test/integration/*.test.js",
+    "create-admin": "node src/scripts/createAdmin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

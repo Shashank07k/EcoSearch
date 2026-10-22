@@ -1,0 +1,12 @@
+process.env.NODE_ENV='development';
+process.env.AUTH_RATE_LIMIT_MAX='3';
+process.env.AUTH_RATE_LIMIT_WINDOW_MS='60000';
+process.env.PORT='5901';
+process.env.MONGODB_URI='mongodb://127.0.0.1:27017/ecosearch_test_ratelimit';
+process.env.JWT_SECRET='test-only-secret-not-for-production-0123456789';
+import { connectDatabase } from '../../src/config/db.js';
+import app from '../../src/app.js';
+await connectDatabase();
+const server = app.listen(5901, '127.0.0.1');
+console.log('RATE_SERVER_READY');
+process.on('SIGTERM',()=>{server.closeAllConnections();server.close();process.exit(0);});
